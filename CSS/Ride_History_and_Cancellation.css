@@ -1,0 +1,449 @@
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-image: url("../Images/Golden_Hour_Campus_Ride_Sharing.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+    background-color: #F3F7FC;
+    color: #26364F;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #20304F;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+/* Navigation */
+nav {
+    background-color: #DCE5F3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+}
+
+nav a {
+    color: #20304F;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #B8CCE8;
+}
+
+/* Main Content */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Page Heading */
+.page-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    color: #20304F;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.page-heading p {
+    color: #52627A;
+}
+
+/* Main Two-Column Layout */
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Common Cards */
+.ride-card,
+.booking-card {
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #C8D8EA;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(24, 45, 75, 0.12);
+}
+
+/* Ride Heading */
+.ride-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.ride-top h3 {
+    color: #20304F;
+    font-size: 22px;
+}
+
+.ride-id {
+    color: #68768B;
+    font-size: 13px;
+}
+
+.seats-badge {
+    background-color: #E3EFFB;
+    color: #245B8F;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Pickup and Destination */
+.route {
+    border-left: 2px dashed #AABCD2;
+    margin-left: 7px;
+    padding-left: 18px;
+    margin-bottom: 24px;
+}
+
+.route p {
+    margin-bottom: 15px;
+}
+
+.route p:last-child {
+    margin-bottom: 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.pickup-dot {
+    background-color: #2879B9;
+}
+
+.destination-dot {
+    background-color: #E49A76;
+}
+
+/* Ride Information Grid */
+.ride-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 15px;
+    border-top: 1px solid #DCE5F0;
+    padding-top: 20px;
+}
+
+.ride-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label {
+    color: #68768B;
+    font-size: 13px;
+}
+
+.ride-info strong {
+    font-size: 14px;
+}
+
+/* Fare Box */
+.fare-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EAF4FF;
+    padding: 15px;
+    margin-top: 24px;
+    border-radius: 8px;
+}
+
+.fare-box strong {
+    color: #245B8F;
+    font-size: 23px;
+}
+
+/* Booking Form */
+.booking-card h3 {
+    color: #20304F;
+    font-size: 23px;
+}
+
+.form-description {
+    color: #68768B;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #C4D2E3;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    color: #26364F;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #397DB5;
+    box-shadow: 0 0 0 3px rgba(57, 125, 181, 0.14);
+}
+
+/* Booking Summary */
+.booking-summary {
+    background-color: #F1F6FC;
+    border: 1px solid #D8E4F1;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 23px 0;
+}
+
+.booking-summary h4 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #20304F;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 7px 0;
+    font-size: 14px;
+}
+
+.total-row {
+    border-top: 1px solid #CFDCEB;
+    margin-top: 8px;
+    padding-top: 14px;
+    font-size: 16px;
+    color: #245B8F;
+}
+
+/* Confirm Booking Button */
+.book-button {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    background-color: #20304F;
+    color: white;
+    padding: 13px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.book-button:hover {
+    background-color: #314A73;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 17px;
+    color: #245B8F;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: #D07852;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #20304F;
+    color: white;
+    text-align: center;
+    padding: 17px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ride-card,
+    .booking-card {
+        padding: 20px;
+    }
+
+    .page-heading h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .ride-info {
+        gap: 15px 8px;
+    }
+
+    .ride-top h3 {
+        font-size: 19px;
+    }
+}
+
+/* Main Content */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #C8D8EA;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(24, 45, 75, 0.12);
+}
+
+/* Main Heading */
+main h2 {
+    color: #20304F;
+    margin-bottom: 8px;
+}
+
+/* Section Headings */
+main h3 {
+    color: #20304F;
+    background-color: #EAF4FF;
+    padding: 10px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Tables */
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 18px;
+}
+
+main th,
+main td {
+    border: 1px solid #D5DFEC;
+    padding: 10px;
+    text-align: left;
+}
+
+main th {
+    background-color: #DCE5F3;
+    color: #20304F;
+}
+
+/* Form */
+main input,
+main select {
+    padding: 8px;
+    border: 1px solid #C4D2E3;
+    border-radius: 4px;
+}
+
+/* Buttons */
+main button,
+main input[type="submit"] {
+    background-color: #20304F;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main button:hover,
+main input[type="submit"]:hover {
+    background-color: #314A73;
+}
+
+/* Links */
+main a {
+    color: #245B8F;
+}
+
+/* Small Screen */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    main table {
+        min-width: 600px;
+    }
+}

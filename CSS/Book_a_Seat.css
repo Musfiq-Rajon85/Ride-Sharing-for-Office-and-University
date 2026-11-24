@@ -1,0 +1,189 @@
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-image: url("../Images/Campus_Ride_Sharing_at_Sunrise.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+    background-color: #F3F7FC;
+    color: #222222;
+}
+
+/* Header */
+header {
+    background-color: #20304F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+/* Navigation */
+nav {
+    background-color: #DCE5F3;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: #20304F;
+    text-decoration: none;
+    padding: 12px 20px;
+}
+
+nav a:hover {
+    background-color: #B8CCE8;
+    color: #20304F;
+}
+
+/* Page Heading */
+.heading {
+    background-color: #EAF4FF;
+    text-align: center;
+    padding: 25px;
+}
+
+.heading h2 {
+    color: #20304F;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.heading p {
+    font-size: 16px;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    gap: 25px;
+    max-width: 1400px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+/* Ride Details and Booking Information */
+.ride-details,
+.booking-info {
+    background-color: white;
+    border: 1px solid #9BAFCD;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+}
+
+/* Section Headings */
+.ride-details h2,
+.booking-info h2 {
+    background-color: #EAF4FF;
+    color: #20304F;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Ride Details Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #D5DFEC;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #EAF4FF;
+    color: #20304F;
+    width: 40%;
+}
+
+/* Booking Form */
+.booking-info label {
+    display: inline-block;
+    width: 35%;
+    font-weight: bold;
+}
+
+.booking-info input[type="number"],
+.booking-info input[type="date"],
+.booking-info select {
+    padding: 10px;
+    width: 63%;
+    border: 1px solid #B8C6D9;
+    border-radius: 4px;
+}
+
+/* Total Fare */
+.total-fare {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EAF4FF;
+    border: 1px solid #D5DFEC;
+    padding: 15px;
+    font-size: 20px;
+    color: #20304F;
+}
+
+/* Confirm Booking Button */
+input[type="submit"] {
+    width: 100%;
+    background-color: #20304F;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #314A73;
+}
+
+/* Back Link */
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #245DA8;
+}
+
+/* Footer */
+footer {
+    background-color: #20304F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 102px;
+}
+
+/* Small Screen */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .ride-details,
+    .booking-info {
+        width: 100%;
+    }
+}

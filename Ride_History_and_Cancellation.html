@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride History and Cancellation</title>
+    <link rel="stylesheet" href="CSS/Ride_History_and_Cancellation.css">
+</head>
+
+<body>
+
+    
+    <header>
+        <h1>Ride Sharing for Office and University</h1>
+    </header>
+
+     
+    <nav>
+        
+        <a href="Search_and_Filter_Rides.html">Search And Filter Rides</a>
+        <a href="Book_a_Seat.html">Book a Seat</a>
+        <a href="Ride_History_and_Cancellation.html">Ride History And Cancellation</a>
+    </nav>
+
+     
+    <main>
+
+        <h2>My Ride History</h2>
+        <p>View your bookings and manage ride cancellations.</p>
+
+        
+        <section>
+            <h3>Upcoming Rides</h3>
+
+            <table>
+                <tr>
+                    <th>Ride ID</th>
+                    <th>Pickup</th>
+                    <th>Destination</th>
+                    <th>Date</th>
+                    <th>Departure</th>
+                    <th>Seats</th>
+                    <th>Total Fare</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                </tr>
+
+                <tr>
+                    <td>RIDE-101</td>
+                    <td>Mirpur, Dhaka</td>
+                    <td>AIUB Campus</td>
+                    <td>30 Oct 2026</td>
+                    <td>8:00 AM</td>
+                    <td>2</td>
+                    <td>300 BDT</td>
+                    <td id="rideStatus">Confirmed</td>
+                    <td><a href="#ride-details">View Details</a></td>
+                </tr>
+            </table>
+        </section>
+
+        
+        <section>
+            <h3>Completed Rides</h3>
+
+            <table>
+                <tr>
+                    <th>Ride ID</th>
+                    <th>Pickup</th>
+                    <th>Destination</th>
+                    <th>Date</th>
+                    <th>Seats</th>
+                    <th>Total Fare</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>RIDE-095</td>
+                    <td>Uttara</td>
+                    <td>AIUB Campus</td>
+                    <td>20 Oct 2026</td>
+                    <td>1</td>
+                    <td>150 BDT</td>
+                    <td>Completed</td>
+                </tr>
+            </table>
+        </section>
+
+      
+        <section>
+            <h3>Cancelled Rides</h3>
+
+            <table>
+                <tr>
+                    <th>Ride ID</th>
+                    <th>Pickup</th>
+                    <th>Destination</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>RIDE-088</td>
+                    <td>Mirpur</td>
+                    <td>AIUB Campus</td>
+                    <td>15 Oct 2026</td>
+                    <td>Cancelled</td>
+                </tr>
+            </table>
+        </section>
+
+        
+        <section id="ride-details">
+            <h3>Cancel Upcoming Ride</h3>
+
+            <form action="#" method="post" onsubmit="return cancelRide()">
+
+                <label for="ride-id">Ride ID:</label>
+                <input type="text" id="ride-id" name="ride_id"
+                       value="RIDE-101" readonly>
+
+                <br><br>
+
+                <label for="reason">Cancellation Reason:</label>
+
+                <select id="reason" name="cancel_reason" required>
+                    <option value="">Select a reason</option>
+                    <option value="Schedule Change">Schedule Change</option>
+                    <option value="Personal Reason">Personal Reason</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <br><br>
+
+                <input type="submit" value="Cancel Ride">
+
+            </form>
+        </section>
+
+        <p class="back-link">
+            <a href="Search_and_Filter_Rides.html">Back to Search Rides</a>
+
+    </main>
+
+    
+    <footer>
+        <p>Ride Sharing for Office and University</p>
+    </footer>
+    
+    <script src="JavaScript/Ride_History_and_Cancellation.js"></script>
+
+</body>
+</html>

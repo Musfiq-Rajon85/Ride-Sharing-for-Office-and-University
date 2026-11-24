@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search and Filter Rides</title>
+    <link rel="stylesheet" href="CSS/Search_and_Filter_Rides.css">
+</head>
+
+<body>
+
+    
+    <header>
+        <h1>Ride Sharing for Office and University</h1>
+    </header>
+
+    
+    <nav>
+        <a href="Search_and_Filter_Rides.html">Search And Filter Rides</a>
+        <a href="Book_a_Seat.html">Book a Seat</a>
+        <a href="Ride_History_and_Cancellation.html">Ride History And Cancellation</a>
+    </nav>
+
+    
+    <main>
+
+        <section>
+            <h2>Search and Filter Rides</h2>
+
+            <p>Find your ride to the office or university.</p>
+
+             
+                <form action="#" method="post" onsubmit="return searchRides()" novalidate>
+
+                <label for="pickup">Pickup Location:</label>
+                <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
+                <br><br>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+                <br><br>
+
+                <label for="date">Ride Date:</label>
+                <input type="date" id="date" name="date" required>
+                <br><br>
+
+                <label for="time">Departure Time:</label>
+                <input type="time" id="time" name="time">
+                <br><br>
+
+                <label for="vehicle">Vehicle Type:</label>
+
+                <select id="vehicle" name="vehicle">
+                    <option value="">All Vehicles</option>
+                    <option value="car">Car</option>
+                    <option value="microbus">Microbus</option>
+                </select>
+
+                <br><br>
+
+                <label for="fare">Maximum Fare (BDT):</label>
+                <input type="number" id="fare" name="fare" placeholder="Enter maximum fare">
+                <br><br>
+
+                <button type="submit">Search Rides</button>
+                <button type="reset">Reset</button>
+
+            </form>
+        </section>
+
+        <hr>
+
+        
+        <section>
+            <h2>Available Rides</h2>
+
+             
+            <div class="ride" data-pickup="mirpur" data-destination="aiub campus" data-date="2026-11-17" data-time="08:00" data-vehicle="car" data-fare="150">
+
+                <h3>Mirpur to AIUB Campus</h3>
+
+                <p><b>Pickup:</b> Mirpur, Dhaka</p>
+                <p><b>Destination:</b> AIUB Campus</p>
+                <p><b>Date:</b> 17 NOV 2026</p>
+                <p><b>Departure Time:</b> 8:00 AM</p>
+                <p><b>Vehicle Type:</b> Car</p>
+                <p><b>Model:</b> Toyota Axio</p>
+                <p><b>Driver:</b> Rahim</p>
+                <p><b>Available Seats:</b> 3</p>
+                <p><b>Fare:</b> 150 BDT per seat</p>
+
+                <a href="Book_a_Seat.html">
+                   <button type="button">Book a Seat</button>
+                </a>
+
+            </div>
+
+            <hr>
+
+            
+            <div class="ride" data-pickup="uttara" data-destination="aiub campus" data-date="2026-11-24" data-time="08:30" data-vehicle="microbus" data-fare="120">
+
+                <h3>Uttara to AIUB Campus</h3>
+
+                <p><b>Pickup:</b> Uttara, Dhaka</p>
+                <p><b>Destination:</b> AIUB Campus</p>
+                <p><b>Date:</b> 24 NOV 2026</p>
+                <p><b>Departure Time:</b> 8:30 AM</p>
+                <p><b>Vehicle Type:</b> Microbus</p>
+                <p><b>Model:</b> Toyota Hiace</p>
+                <p><b>Driver:</b> Karim</p>
+                <p><b>Available Seats:</b> 5</p>
+                <p><b>Fare:</b> 120 BDT per seat</p>
+
+                <a href="Book_a_Seat.html">
+                   <button type="button">Book a Seat</button>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+    <footer>
+        <p>Ride Sharing for Office and University</p>
+    </footer>
+
+    <script src="JavaScript/Search_and_Filter_Rides.js"></script>
+
+</body>
+
+</html>

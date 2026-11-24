@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Seat</title>
+    <link rel="stylesheet" href="CSS/Book_a_Seat.css">
+</head>
+
+<body>
+
+   
+    <header>
+        <h1>Ride Sharing for Office and University</h1>
+    </header>
+
+    
+    <nav>
+        <a href="Search_and_Filter_Rides.html">Search And Filter Rides</a>
+        <a href="Book_a_Seat.html">Book a Seat</a>
+        <a href="Ride_History_and_Cancellation.html">Ride History And Cancellation</a>
+    </nav>
+
+    
+    <section class="heading">
+        <h2>Book a Seat</h2>
+        <p>Review ride details and request your seat.</p>
+    </section>
+
+    <main>
+
+         
+        <section class="ride-details">
+
+            <h2>Selected Ride Details</h2>
+
+            
+    <table>
+        <tr>
+        <th>Pickup Location</th>
+        <td>Mirpur, Dhaka</td>
+        </tr>
+
+        <tr>
+        <th>Destination</th>
+        <td>AIUB Campus</td>
+    </tr>
+
+    <tr>
+        <th>Ride Date</th>
+        <td>17 NOV 2026</td>
+    </tr>
+
+    <tr>
+        <th>Departure Time</th>
+        <td>8:00 AM</td>
+    </tr>
+
+    <tr>
+        <th>Driver</th>
+        <td>Rahim</td>
+    </tr>
+
+    <tr>
+        <th>Vehicle</th>
+        <td>Car</td>
+    </tr>
+
+    <tr>
+        <th>Available Seats</th>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <th>Fare per Seat</th>
+        <td>150 BDT</td>
+    </tr>
+</table>
+
+        </section>
+
+        
+        <section class="booking-info">
+
+            <h2>Booking Information</h2>
+
+            <form action="#" method="post" onsubmit="return bookSeat()">
+
+                <label for="seats">Number of Seats</label>
+                <input type="number" id="seats" name="seats" min="1" max="3" oninput="calculateFare()" required>
+                <br><br>
+               
+               
+                <label for="rider">Rider ID</label>
+                <input type="number" id="rider" name="rider_id" placeholder="Your user ID" required>
+                <br><br>
+                  
+
+                <label for="request-date">Request Date</label>
+                <input type="date" id="request-date" name="request_date"   required>
+                <br><br>
+
+                <label for="status">Status</label>
+                <select id="status" name="status">
+                    <option value="Pending" selected>Pending</option>
+                </select>
+
+                <br><br>
+
+               
+                <div class="total-fare">
+                    <b>Total Fare:</b>
+                     
+                </div>
+
+                <br>
+
+                <input type="submit" value="Confirm Booking">
+
+                <p class="back-link">
+                    <a href="Search_and_Filter_Rides.html"> Cancel / Back to Search Rides</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    
+    <footer>
+        <p>Ride Sharing for Office and University</p>
+    </footer>
+
+</body>
+</html>
