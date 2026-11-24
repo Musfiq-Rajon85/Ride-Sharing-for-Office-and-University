@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background: #e8f7f6;
+    color: #1f2937;
+}
+
+p {
+    color: #64748b;
+}
+
+a {
+    color: #218b8d;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*  Main container  */
+
+.profile-container {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 520px;
+    margin: 0 auto;
+    padding: 30px 30px 30px 44%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+}
+
+/* Left side image panel */
+
+.profile-container::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 62%;
+    height: 100%;
+    background-color: #2eadae; 
+    background-image: url("../Images/ride sharing-profile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Hide duplicate heading */
+
+h3,
+.profile-container > p {
+    display: none;
+}
+
+
+/* Header - */
+
+.profile-header {
+    position: relative;
+    min-height: 65px;
+    margin-bottom: 22px;
+    padding: 0 0 15px 68px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    padding: 2px;
+    border: 3px solid #d4f1ef;
+    border-radius: 50%;
+    background: white;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 0 0 5px;
+    color: #218b8d;
+}
+
+.profile-header h2 {
+    margin: 5px 0;
+    font-size: 23px;
+}
+
+.profile-header p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* Form  */
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.field-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 13px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2eadae;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background: #2eadae;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background: #218b8d;
+}
+
+input[type="reset"] {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+
+/*  Mobile */
+
+@media (max-width: 650px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .profile-container {
+        max-width: 450px;
+        padding: 20px;
+    }
+
+    .profile-container::before {
+        display: none;
+    }
+
+    .profile-header {
+        padding-left: 65px;
+    }
+
+    .profile-header h2 {
+        font-size: 21px;
+    }
+
+    .profile-picture {
+        width: 50px;
+        height: 50px;
+    }
+}

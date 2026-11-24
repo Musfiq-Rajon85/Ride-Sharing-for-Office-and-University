@@ -1,0 +1,244 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    background-image: url("../Images/ride-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #1f2937;
+    padding: 20px;
+}
+
+
+/* Header */
+header {
+    background-color: #163b50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    color: #62d5d0;
+    margin-bottom: 5px;
+}
+
+header hr {
+    margin-top: 15px;
+}
+
+/* Navigation - Without Flexbox */
+nav {
+    padding: 15px 0;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px;
+    color: #218b8d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #163b50;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+main h1 {
+    color: #163b50;
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+section h2 {
+    color: #163b50;
+    margin-bottom: 15px;
+}
+
+/* User Overview */
+.user-overview p {
+    display: inline-block;
+    background-color: #e8f7f6;
+    color: #163b50;
+    padding: 20px;
+    margin: 8px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 180px;
+    text-align: center;
+    border: 1px solid #c5e9e6;
+}
+
+/* Search Form */
+form {
+    padding: 10px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2eadae;
+}
+
+/* Search and Reset Buttons */
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #2eadae;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #218b8d;
+}
+
+input[type="reset"] {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+/* User Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    text-align: left;
+}
+
+th {
+    background-color: #163b50;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e8f7f6;
+}
+
+tbody tr:hover {
+    background-color: #d4f1ef;
+}
+
+/* Table Links */
+td a {
+    color: #218b8d;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Dashboard Button */
+.back-button {
+    display: inline-block;
+    background-color: #163b50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background-color: #218b8d;
+    color: white;
+}
+
+a:active {
+    color: #ef4444;
+}
+
+/* Horizontal Lines */
+hr {
+    border: none;
+    border-top: 1px solid #d1d5db;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px 3px;
+    }
+
+    section {
+        padding: 12px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    input[type="text"],
+    select {
+        max-width: 100%;
+    }
+}

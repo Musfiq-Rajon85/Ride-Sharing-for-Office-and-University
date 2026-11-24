@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complaint Management</title>
+
+    <link rel="stylesheet" href="../CSS/complaints.css">
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Complaint Management</h1>
+
+    <p>View and manage complaints submitted by users.</p>
+
+     <div class="admin-info">
+
+        <img src="../Images/admin.png" alt="Admin" width="50" height="50">
+
+          <p>Administrator</p>
+      </div>
+
+   </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a> |
+        <a href="users.html">User Management</a> |
+        <a href="rides.html">Ride Monitoring</a> |
+        <a href="reports.html">Reports and Analytics</a> |
+        <a href="complaints.html">Complaint Management</a>
+
+    </nav>
+
+    <hr>
+
+    <main>
+
+        <section>
+
+            <h3>Total Complaints:</h3>
+         
+            <h3>Pending:</h3>
+
+            <h3>In Progress:</h3>
+      
+            <h3>Resolved:</h3>
+          
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Search and Filter Complaints</h2>
+
+            <form action="#" method="get" id="complaintSearchForm" onsubmit="return validateForm(this)" novalidate>
+
+                <label for="complaintID">Search by Complaint ID:</label>
+                <input type="text" id="complaintID" name="complaintID" placeholder="Enter Complaint ID"><br><br>
+
+                <label for="userName">Search by User Name:</label>
+                <input type="text" id="userName" name="userName" placeholder="Enter User Name"><br><br>
+
+                <label for="status">Filter by Complaint Status:</label>
+
+                <select id="status" name="status">
+                    <option value="all">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="resolved">Resolved</option>
+                </select><br><br>
+
+                <label for="type">Filter by Complaint Type:</label>
+
+                <select id="type" name="type">
+                    <option value="all">All Types</option>
+                    <option value="driver-behavior">Driver Behavior</option>
+                    <option value="payment-issue">Payment Issue</option>
+                    <option value="ride-cancellation">Ride Cancellation</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <p class="error-message" style="color: red;"></p>
+
+                <input type="submit" value="Search">
+                <input type="reset" value="Reset">
+
+            </form>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>All Complaints</h2>
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>Complaint ID</th>
+                        <th>User Name</th>
+                        <th>User Role</th>
+                        <th>Complaint Type</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>C001</td>
+                        <td>Rahim Ahmed</td>
+                        <td>Driver</td>
+                        <td>Driver Behavior</td>
+                        <td>Rude behavior during the ride.</td>
+                        <td>18 Nov 2026</td>
+                        <td>Pending</td>
+                        <td><a href="#complaint1">View</a></td>
+
+                    </tr>
+
+                    <tr>
+                        <td>C002</td>
+                        <td>Karim Hasan</td>
+                        <td>Passenger</td>
+                        <td>Payment Issue</td>
+                        <td>Payment was deducted twice.</td>
+                        <td>19 Nov 2026</td>
+                        <td>In Progress</td>
+                        <td><a href="#complaint2">View</a></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Complaint Details</h2>
+
+            <section id="complaint1">
+
+                <h3>Complaint ID: C001</h3>
+
+                <p><b>User Name:</b> Rahim Ahmed</p>
+                <p><b>User Email:</b> rahim@example.com</p>
+                <p><b>User Role:</b> Driver</p>
+                <p><b>Complaint Type:</b> Driver Behavior</p>
+                <p><b>Description:</b> Rude behavior during the ride.</p>
+                <p><b>Submission Date:</b> 18 Nov 2026</p>
+                <p><b>Current Status:</b> Pending</p>
+
+            </section>
+
+            <hr>
+
+            <section id="complaint2">
+
+                <h3>Complaint ID: C002</h3>
+
+                <p><b>User Name:</b> Karim Hasan</p>
+                <p><b>User Email:</b> karim@example.com</p>
+                <p><b>User Role:</b> Passenger</p>
+                <p><b>Complaint Type:</b> Payment Issue</p>
+                <p><b>Description:</b> Payment was deducted twice.</p>
+                <p><b>Submission Date:</b> 19 Nov 2026</p>
+                <p><b>Current Status:</b> In Progress</p>
+
+            </section>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Manage Complaint</h2>
+
+            <form action="#" method="get" id="complaintUpdateForm" onsubmit="return validateForm(this)" novalidate>
+
+                <label for="manageID">Complaint ID:</label><br>
+
+                <input type="text" id="manageID" name="manageID" placeholder="Enter Complaint ID"><br><br>
+
+                <label for="updateStatus">Update Complaint Status:</label>
+
+                <select id="updateStatus" name="updateStatus">
+
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="resolved">Resolved</option>
+
+                </select><br><br>
+
+                <label for="remarks">Admin Remarks:</label><br>
+
+                <textarea id="remarks" name="remarks" rows="5" cols="40" placeholder="Enter admin remarks"></textarea><br><br>
+
+                <p class="error-message" style="color: red;"></p>
+
+                <input type="submit" value="Update Complaint">
+
+                <input type="submit" value="Mark as Resolved">
+
+                <input type="reset" value="Reset">
+
+            </form>
+
+        </section>
+
+        <hr>
+
+       <p>
+          <a href="dashboard.html" class="back-button"> Back to Dashboard </a>
+       </p>
+
+    </main>
+
+    <footer>
+
+        <hr>
+
+        <p>Ride Sharing for Office and University</p>
+        <p>Admin Panel &copy; 2026</p>
+
+    </footer>
+
+       <script src="../Javascript/complaints.js"></script>
+
+</body>
+
+</html>

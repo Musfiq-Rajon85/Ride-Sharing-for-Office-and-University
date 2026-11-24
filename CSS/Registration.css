@@ -1,0 +1,651 @@
+
+:root {
+    --primary: #159b9b;
+    --primary-dark: #087b83;
+    --text-color: #243b59;
+    --border-color: #d3dfed;
+}
+
+/*  Universal Selector and Box Model */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*  Body and Page Background */
+
+body {
+    min-height: 100vh;
+    padding: 30px 24px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #243b59;
+
+    background-color: #eaf8f5;
+
+    background-image:
+        radial-gradient(circle at 0% 0%,  #bcece5 0%, transparent 27% ),
+
+        radial-gradient(circle at 100% 100%, #c7eee8 0%, transparent 25%),
+        linear-gradient(135deg,#e9f8f5, #f4f8ff);
+}
+
+
+/*  Page Header */
+
+.page-header {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #087f86;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.brand-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.page-header p {
+    color: #52738b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/*  Main Registration Container */
+
+.registration-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    background-color: #ffffff;
+
+    border: 1px solid #deefec;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 50px rgba(28, 105, 113, 0.14);
+}
+
+
+/* Left Information Section */
+
+.left-side {
+    flex: 0 0 39%;
+    min-width: 0;
+
+    padding: 36px;
+
+    background-color: #e6f8f4;
+
+    background-image:
+        linear-gradient(145deg, #e1f6f1, #f0fbf9 60%, #dff4f0 );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-label {
+    margin-bottom: 14px;
+
+    color: #138e91;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.left-side h1 {
+    margin-bottom: 16px;
+
+    color: #153b68;
+    font-size: 34px;
+    line-height: 1.25;
+}
+
+.left-side h1 span {
+    color: #078e91;
+}
+
+.intro-text {
+    margin-bottom: 22px;
+
+    color: #58728e;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/*  Car Image and Caption */
+
+.car-figure {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.car-image {
+    display: block;
+
+    width: 100%;
+    height: 225px;
+
+    object-fit: cover;
+
+    border: 3px solid #ffffff;
+    border-radius: 13px;
+
+    box-shadow:
+        0 8px 22px rgba(31, 89, 106, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.car-image:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(31, 89, 106, 0.18);
+}
+
+.car-figure figcaption {
+    margin-top: 9px;
+
+    color: #71889c;
+    font-size: 11px;
+    font-style: italic;
+}
+
+
+/*  Benefits Section - Without Icons */
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+.benefit-item {
+    display: block;
+
+    padding-left: 2px;
+}
+
+.benefit-item h3 {
+    margin-bottom: 4px;
+
+    color: #24516d;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* Add Tick Sign Before Benefit Headings */
+
+.benefit-item h3::before {
+    content: "\2713";
+    
+    color: #159b9b;
+    
+    font-size: 15px;
+    font-weight: 900;
+    
+    margin-right: 8px;
+}
+
+.benefit-item p {
+    color: #70849a;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* Right Registration Section */
+
+.right-side {
+    flex: 1 1 61%;
+    min-width: 0;
+
+    padding: 35px 40px;
+
+    background-color: #ffffff;
+}
+
+
+/*  Form Heading */
+
+.form-heading {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    margin-bottom: 7px;
+
+    color: #148d91;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.form-heading h2 {
+    margin-bottom: 7px;
+
+    color: #15376d;
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.form-heading p {
+    color: #6b7f9d;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Horizontal Line */
+
+.section-line {
+    height: 1px;
+    margin-bottom: 19px;
+
+    border: none;
+    background-color: #e6edf4;
+}
+
+
+/* Form Sections and Fieldsets */
+
+form {
+    width: 100%;
+}
+
+.form-section {
+    min-width: 0;
+
+    margin-bottom: 20px;
+    padding: 0;
+
+    border: none;
+}
+
+.form-section legend {
+    display: block;
+    width: 100%;
+
+    margin-bottom: 13px;
+
+    color: #315578;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* Form Grid */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 20px;
+    row-gap: 15px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.full-width {
+
+    flex: 0 0 100%;
+}
+
+
+/*  Form Labels */
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #355273;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/*  Input Fields and Select */
+
+.form-group input,
+.form-group select {
+    display: block;
+
+    width: 100%;
+    height: 44px;
+
+    padding: 0 12px;
+
+    font-family: inherit;
+    font-size: 12px;
+    color: #263f5e;
+
+    background-color: #fbfdff;
+
+    border: 1px solid #d3dfed;
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder {
+    color: #9baac0;
+    opacity: 1;
+}
+
+
+/* Dropdown */
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+/* Input Focus Effect */
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #159b9b;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(21, 155, 155, 0.11);
+}
+
+
+/*  Terms and Conditions */
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.terms input {
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+    margin-top: 2px;
+
+    accent-color: #159b9b;
+    cursor: pointer;
+}
+
+.terms label {
+    color: #5c718b;
+    font-size: 12px;
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+.terms a {
+    color: #078b8d;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Common Button Design */
+.register-btn, .reset-btn {
+    min-height: 45px;
+    padding: 11px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: background-color 0.25s ease,
+                box-shadow 0.25s ease,
+                transform 0.2s ease;
+}
+
+/* Register Button */
+.register-btn {
+    flex: 1;
+
+    color: #ffffff;
+    background-image: linear-gradient(100deg, #148d96, #20aa9d);
+
+    box-shadow: 0 4px 12px rgba(21, 155, 155, 0.15);
+}
+
+.register-btn:hover {
+    background-image: linear-gradient(100deg, #087b83, #138e85);
+    box-shadow: 0 7px 16px rgba(21, 155, 155, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Reset Button */
+.reset-btn {
+    color: #435974;
+    background-color: #eaf0f6;
+}
+
+.reset-btn:hover {
+    background-color: #d9e5ef;
+}
+
+
+/*  Login Link */
+
+.login-link {
+    margin-top: 20px;
+
+    color: #7a8ba4;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.login-link a {
+    margin-left: 5px;
+
+    color: #078b8d;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/*  Page Footer */
+
+.page-footer {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 18px auto 0;
+
+    color: #6e8798;
+    font-size: 11px;
+    text-align: center;
+}
+
+
+/* Tablet Responsive Design */
+
+@media (max-width: 950px) {
+
+    body {
+        padding: 22px 14px;
+    }
+
+    .left-side {
+        flex-basis: 36%;
+        padding: 25px;
+    }
+
+    .right-side {
+        padding: 28px;
+    }
+
+    .left-side h1 {
+        font-size: 28px;
+    }
+
+    .car-image {
+        height: 190px;
+    }
+
+    .form-heading h2 {
+        font-size: 29px;
+    }
+
+    .form-grid {
+        column-gap: 14px;
+    }
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 680px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .page-header {
+        margin-bottom: 15px;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+    .brand-icon {
+        font-size: 25px;
+    }
+
+    .page-header > p {
+        font-size: 10px;
+        text-align: right;
+    }
+
+    .registration-container {
+        flex-direction: column;
+        border-radius: 14px;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .left-side h1 {
+        font-size: 29px;
+    }
+
+    .intro-text {
+        font-size: 13px;
+    }
+
+    .car-image {
+        height: auto;
+        max-height: 250px;
+    }
+
+    .benefits {
+        gap: 14px;
+    }
+
+    .right-side {
+        padding: 26px 22px;
+    }
+
+    .form-heading h2 {
+        font-size: 29px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        row-gap: 14px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .register-btn, .reset-btn {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .page-footer {
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Ride Sharing</h2>
+            <p class="sidebar-subtitle">Admin Panel</p>
+
+            <nav>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="users.html">User Management</a>
+                <a href="rides.html">Ride Monitoring</a>
+                <a href="reports.html">Reports and Analytics</a>
+                <a href="complaints.html">Complaint Management</a>
+                <a href="../profile.html">My Profile</a>
+                <a href="logout.html">Logout</a>
+                
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Welcome Section -->
+            <header class="top-header">
+
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Welcome back, Admin!</p>
+                </div>
+
+                <div class="admin-profile">
+                    
+                    <img src="../Images/admin.png" alt="Admin Profile">
+
+                    <span>Administrator</span>
+                </div>
+
+            </header>
+
+            <!-- Summary Cards -->
+            <section class="summary-section">
+
+                <h2>Overview</h2>
+
+                <div class="summary-cards">
+
+                    <div class="summary-card users-card">
+
+                        <p>Total Users:</p>
+
+                    </div>
+
+                    <div class="summary-card rides-card">
+
+                        <p>Active Rides:</p>
+                
+                    </div>
+
+                    <div class="summary-card requests-card">
+
+                        <p>Pending Requests:</p>
+                     
+                    </div>
+
+                    <div class="summary-card complaints-card">
+
+                        <p>Open Complaints:</p>
+                        
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Recent Rides -->
+            <section class="content-section">
+
+                <div class="section-heading">
+                    <h2>Recent Rides</h2>
+                    <a href="rides.html">View All</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ride ID</th>
+                            <th>Driver</th>
+                            <th>Destination</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>R001</td>
+                            <td>Rahim Ahmed</td>
+                            <td>AIUB</td>
+                            <td>21 Oct 2026</td>
+                            <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>R002</td>
+                            <td>Karim Hasan</td>
+                            <td>Banani</td>
+                            <td>21 Oct 2026</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>R003</td>
+                            <td>Nusrat Jahan</td>
+                            <td>Uttara</td>
+                            <td>22 Oct 2026</td>
+                            <td>Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <!-- Recent Users -->
+            <section class="content-section">
+
+                <div class="section-heading">
+                    <h2>Recent Users</h2>
+                    <a href="users.html">View All</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Rahim Ahmed</td>
+                            <td>rahim@example.com</td>
+                            <td>Driver</td>
+                              <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>Nusrat Jahan</td>
+                            <td>nusrat@example.com</td>
+                            <td>Passenger</td>
+                              <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>Karim Hasan</td>
+                            <td>karim@example.com</td>
+                            <td>Driver</td>
+                            <td>Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <!-- Reports and Complaint Summary -->
+            <section class="bottom-section">
+
+                <div class="report-box">
+                    <h2>Reports and Analytics</h2>
+                    <p>Total Rides: </p>
+                    <p>Completed Rides: </p>
+                    <p>Cancelled Rides: </p>
+                    <p>Pending Rides: </p>
+
+                    <a href="reports.html">View Reports</a>
+                </div>
+
+                <div class="report-box">
+                    <h2>Complaint Status</h2>
+                    <p>Open Complaints: </p>
+                    <p>Under Review: </p>
+                    <p>Resolved Complaints: </p>
+
+                    <a href="complaints.html">Manage Complaints</a>
+                </div>
+
+            </section>
+
+            <footer>
+                <p>Ride Sharing for Office and University</p>
+                <p>Admin Dashboard &copy; 2026</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

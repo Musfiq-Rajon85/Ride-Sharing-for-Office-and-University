@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile</title>
+
+    <link rel="stylesheet" href="CSS/profile.css">
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        
+    
+       <div class="profile-header">
+
+            <img src="Images/profile.png" alt="Profile Picture" class="profile-picture">
+
+          <h2>My Profile</h2>
+
+          <p>Manage your personal information</p>
+
+        </div>
+
+
+        <h3>My Profile</h3>
+        <p>View and update your account information.</p>
+
+        <form action="#" method="post" id="profileForm" onsubmit="return validateForm()" novalidate>
+
+            <label for="fullname">
+
+              <img src="Images/user-icon.png" alt="" class="field-icon">
+                Full Name:
+            </label>
+
+            <input type="text" id="fullname" name="fullname" value="Your Name" required><br><br>
+
+            <label for="email">
+
+                <img src="Images/email-icon.png" alt="" class="field-icon"> Email:</label><br>
+
+            <input type="email" id="email" name="email" value="yourname@example.com" required><br><br>
+
+             <label for="phone">
+              <img src="Images/phone-icon.png" alt="" class="field-icon">
+              Phone Number:
+             </label><br>
+
+             <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br><br>
+
+             <label for="organization">
+               <img src="Images/office-icon.png" alt="" class="field-icon">
+                Office / University:
+             </label><br>
+
+             <input type="text" id="organization" name="organization" placeholder="Enter office or university name"><br><br>
+
+              <label for="role">
+                
+                <img src="Images/shield-icon.png" alt="" class="field-icon">
+
+                  Account Role:
+
+              </label><br>
+
+             <select id="role" name="role">
+               <option value="Passenger">Passenger</option>
+               <option value="Driver">Driver</option>
+               <option value="Organization">Organization Manager</option>
+             </select><br><br>
+
+             <p id="error" style="color: red;"></p>
+
+            <input type="submit" value="Save Changes">
+            <input type="reset" value="Reset">
+
+        </form>
+
+        <p>
+            <a href="index.html">Back to Home</a>
+        </p>
+
+    </div>
+
+    <script src="Javascript/profile.js"></script>
+
+</body>
+</html>

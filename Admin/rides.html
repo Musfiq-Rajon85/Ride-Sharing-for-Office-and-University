@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ride Monitoring</title>
+
+    <link rel="stylesheet" href="../CSS/rides.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Ride Monitoring</h1>
+
+        <p>View and monitor all rides in the system.</p>
+
+        <div>
+            <img src="../Images/admin.png" alt="Admin" width="50" height="50">
+            <p>Administrator</p>
+        </div>
+
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a> |
+        <a href="users.html">User Management</a> |
+        <a href="rides.html">Ride Monitoring</a> |
+        <a href="reports.html">Reports and Analytics</a> |
+        <a href="complaints.html">Complaint Management</a>
+    </nav>
+
+    <hr>
+
+    <main>
+
+        <section class="ride-overview">
+
+            <h3>Total Rides:</h3>
+            <h3>Ongoing Rides:</h3>
+            <h3>Completed Rides:</h3>
+            <h3>Cancelled Rides:</h3>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Search and Filter Rides</h2>
+
+            <form action="#" method="post" id="rideSearchForm" onsubmit="return validateForm(this)" novalidate>
+
+                <label for="rideID">Search by Ride ID:</label>
+                <input type="text" id="rideID" name="rideID" placeholder="Enter Ride ID"><br><br>
+
+                <label for="passenger">Passenger Name:</label>
+                <input type="text" id="passenger" name="passenger" placeholder="Enter Passenger Name"><br><br>
+
+                <label for="driver">Driver Name:</label>
+                <input type="text" id="driver" name="driver" placeholder="Enter Driver Name"><br><br>
+
+                <label for="status">Filter by Ride Status:</label>
+
+                <select id="status" name="status">
+
+                    <option value="all">All Statuses</option>
+                    <option value="ongoing">Ongoing</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+
+                </select><br><br>
+
+                <label for="date">Filter by Date:</label>
+                <input type="date" id="date" name="date">
+
+                <br><br>
+
+                <p class="error-message" style="color:red;"></p>
+
+                <input type="submit" value="Search">
+                <input type="reset" value="Reset">
+
+            </form>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>All Rides</h2>
+
+            <table border="1">
+
+                <thead>
+
+                    <tr>
+                        <th>Ride ID</th>
+                        <th>Passenger</th>
+                        <th>Driver</th>
+                        <th>Pickup Location</th>
+                        <th>Destination</th>
+                        <th>Date</th>
+                        <th>Fare</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>R001</td>
+                        <td>Rahim Ahmed</td>
+                        <td>Karim Hasan</td>
+                        <td>Dhanmondi</td>
+                        <td>Gulshan</td>
+                        <td>18 Nov 2026</td>
+                        <td>250 TK</td>
+                        <td>Completed</td>
+                        <td><a href="#ride1">View</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>R002</td>
+                        <td>Sakib Ahmed</td>
+                        <td>Hasan Ali</td>
+                        <td>Uttara</td>
+                        <td>Banani</td>
+                        <td>19 Nov 2026</td>
+                        <td>180 TK</td>
+                        <td>Ongoing</td>
+                        <td><a href="#ride2">View</a></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>Ride Details</h2>
+
+            <section id="ride1">
+
+                <h3>Ride ID: R001</h3>
+
+                <p>Passenger: Rahim Ahmed</p>
+                <p>Driver: Karim Hasan</p>
+                <p>Pickup Location: Dhanmondi</p>
+                <p>Destination: Gulshan</p>
+                <p>Date: 18 Nov 2026</p>
+                <p>Fare: 250 TK</p>
+                <p>Status: Completed</p>
+
+            </section>
+
+            <hr>
+
+            <section id="ride2">
+
+                <h3>Ride ID: R002</h3>
+
+                <p>Driver: Hasan Ali</p>
+                <p>Pickup Location: Uttara</p>
+                <p>Destination: Banani</p>
+                <p>Date: 19 Nov 2026</p>
+                <p>Fare: 180 TK</p>
+                <p>Status: Ongoing</p>
+
+            </section>
+
+            <hr>
+
+        </section>
+
+        <hr>
+
+        <p>
+            <a href="dashboard.html">Back to Dashboard</a>
+        </p>
+
+    </main>
+
+    <footer>
+
+        <hr>
+
+        <p>Ride Sharing for Office and University</p>
+        <p>Admin Panel &copy; 2026</p>
+
+    </footer>
+
+     <script src="../Javascript/rides.js"></script>
+
+</body>
+
+</html>

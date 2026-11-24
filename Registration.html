@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ride Sharing | Create Account</title>
+
+    <link rel="stylesheet" href="CSS/Registration.css">
+</head>
+
+<body>
+
+
+    <header class="page-header">
+
+        <a href="Registration.html" class="brand">
+            
+           <img src="Images/car-icon.png"  alt="Car Icon" class="brand-icon">
+
+            <span>Ride Sharing</span>
+        </a>
+
+    </header>
+
+    
+    <main class="registration-container">
+
+        
+        <section class="left-side">
+
+            <p class="welcome-label">WELCOME TO RIDE SHARING</p>
+
+            <h1>
+                Travel Together,<br>
+                <span>Save Together!</span>
+            </h1>
+
+            <p class="intro-text">
+                Make your daily journey easier, safer and more affordable.Connect with people from your office or university and share your ride.
+            </p>
+
+        
+            <figure class="car-figure">
+
+                <img
+                    src="Images/Ride Sharing.png" alt="A car ready for a shared journey" class="car-image">
+
+                <figcaption>
+                    Your journey, shared with your community.
+                </figcaption>
+
+            </figure>
+
+            <section class="benefits">
+
+                <div class="benefit-item">
+                    <h3>Safe Rides</h3>
+                    <p>Travel with your community.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <h3>Save Together</h3>
+                    <p>Share everyday travel costs.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <h3>Greener Future</h3>
+                    <p>Help reduce extra car journeys.</p>
+                </div>
+
+            </section>
+
+        </section>
+
+        <section class="right-side">
+
+            <header class="form-heading">
+
+                <h2>Create Account</h2>
+
+                <p>
+                    Register to connect with your office or university community.
+                </p>
+
+            </header>
+
+            <hr class="section-line">
+
+            <form action="#" method="post" id="registrationForm" onsubmit="return validateForm()" novalidate>
+
+        
+                <fieldset class="form-section">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+
+                            <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" required>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role">Register As</label>
+
+                          <select id="role" name="role">
+                             <option value="">Select Your Role</option>
+                             <option value="Passenger">Passenger</option>
+                             <option value="Driver">Driver</option>
+                             <option value="Organization">Organization Manager</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="form-group full-width">
+
+                            <label for="organization"> Office / University </label>
+
+                            <input type="text" id="organization" name="organization" placeholder="Enter office or university name" required>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+        
+                <fieldset class="form-section">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="password">Password</label>
+
+                            <input type="password" id="password" name="password" placeholder="Create a password" minlength="8" autocomplete="new-password" required>
+                             
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="confirm-password"> Confirm Password </label>
+
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" minlength="8" autocomplete="new-password" required>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                
+                <div class="terms">
+
+                    <input type="checkbox" id="terms" name="terms" required>
+
+                    <label for="terms"> I agree to the
+
+                        <a href="#terms-info">Terms and Conditions</a>
+
+                    </label>
+
+                </div>
+
+                
+                <div class="button-group">
+
+                    <input type="submit" value="Register" class="register-btn">
+
+                    <input type="reset" value="Reset" class="reset-btn">
+
+                </div>
+
+                <p id="error" style="color: red;"></p>
+                 
+                <p class="login-link"> Already have an account?
+
+                    <a href="LoginPage.html">Login here</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="page-footer" id="terms-info">
+
+        <p>
+            &copy; 2026 Ride Sharing. Travel smarter, together.
+        </p>
+
+    </footer>
+
+    <script src="Javascript/registration.js"></script>
+
+</body>
+
+</html>

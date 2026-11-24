@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginPage.css">
+    <title>Login Form</title>
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        
+        <div class="brand-panel">
+            <h1>Ride Sharing</h1>
+            <p class="tagline">for Office and University</p>
+
+            <h2>Travel Together,<br>Save Together!</h2>
+            <p class="desc">Safe, affordable and convenient rides for your daily commute.</p>
+
+            <div class="features">
+             <p class="feature-item">Safe Rides</p>
+             <p class="feature-item">Trusted Community</p>
+             <p class="feature-item">Greener Future</p>
+            </div>
+        </div>
+
+        <div class="form-panel">
+            <h2>Welcome back</h2>
+            <p class="subtitle">Please login to your account</p>
+
+            <form action="#" method="post" id="loginForm" onsubmit="return validateForm()" novalidate>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <p id="error" style="color: red;"></p>
+
+                <div class="options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember Me</label>
+                    </div>
+                    <a href="ForgotPassword.html">Forgot Password?</a>
+                </div>
+
+                <input type="submit" value="Login">
+                <input type="reset" value="Reset">
+
+                <p class="signup">Don't have an account?
+                    
+                    <a href="Registration.html">Create Account</a>
+                </p>
+
+            </form>
+        </div>
+
+        <script src="Javascript/loginPage.js"></script>
+
+    </div>
+
+</body>
+</html>
